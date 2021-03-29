@@ -18,7 +18,7 @@ const  Form = () => {
 
     const handleSubmit = (e) =>  {
         e.preventDefault();
-        
+        console.log("hello",postData);
         dispatch(createPost(postData))
     }
     const clear = () =>  {}
@@ -39,7 +39,7 @@ const  Form = () => {
                     onDone={(base64) => setPostData({...postData,selectedFile:base64})}
                 />
             </div>
-            <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth  >Submit</Button>
+            <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit"  onClick={handleSubmit} fullWidth  >Submit</Button>
             <Button className={classes.buttonSubmit} variant="contained" color="secondary" size="small" onClick={clear} fullWidth  >Clear</Button>
             </Paper>
         )

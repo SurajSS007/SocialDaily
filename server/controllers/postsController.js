@@ -10,7 +10,6 @@ export const getPosts = async(req,res) => {
         }
 }
 export const createPosts = async(req,res) => {
-    console.log("createpost"); 
 
 
     try {
